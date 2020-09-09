@@ -19,17 +19,15 @@ public class RenameSection {
 
             System.out.println("ENTER THE USERNAME TO EDIT");
             String username= myObj.nextLine();
+            username.toLowerCase();
             if(jedis.exists(username)){
                 System.out.println("ENTER THE NEW USENAME");
                 String newusername= myObj.nextLine();
+                newusername.toLowerCase();
                 jedis.rename(username,newusername);
             }else{
                 System.out.println("ENTER THE VALID USERNAME .THIS USER DOESN'T EXIST");
             }
-
-
-
-
 
         }catch(Exception e) {
             System.out.println(e);

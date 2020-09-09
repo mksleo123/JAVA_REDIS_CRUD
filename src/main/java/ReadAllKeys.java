@@ -23,7 +23,7 @@ public class ReadAllKeys {
             Iterator<String> it = names.iterator();
             while (it.hasNext()) {
                 String s = it.next();
-                System.out.println(s);
+                System.out.println("Username is:"+s+"  And Unique Id is : "+jedis.get(s));
             }
 
         }catch(Exception e) {

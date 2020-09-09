@@ -19,6 +19,7 @@ public class Creation {
             System.out.println("The server is running " + jedis.ping());
             System.out.println("enter the username");
             String username= myObj.nextLine();
+            username.toLowerCase();
 
            // TODO for the one who just press enter without giving any key
 //            for(int i=0; i<username.length(); i++)

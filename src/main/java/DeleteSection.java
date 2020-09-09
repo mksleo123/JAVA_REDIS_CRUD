@@ -20,6 +20,7 @@ public class DeleteSection {
 
             System.out.println("ENTER THE USERNAME TO DELETE");
             String username= myObj.nextLine();
+            username.toLowerCase();
             if(jedis.exists(username)){
                 jedis.del(username);
                 System.out.println("USERNAME DELETED");
