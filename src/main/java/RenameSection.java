@@ -19,8 +19,7 @@ public class RenameSection {
 
             System.out.println("ENTER THE USERNAME TO EDIT");
             String username= myObj.nextLine();
-            username.toLowerCase();
-            if(jedis.exists(username)){
+            if(jedis.exists(username.toLowerCase())){
                 System.out.println("ENTER THE NEW USENAME");
                 String newusername= myObj.nextLine();
                 newusername.toLowerCase();
